@@ -5,11 +5,15 @@ import { LoaderContainer, useLoader } from "react18-loaders";
 import { LandingPage, Layout } from "@repo/shared/dist/server";
 import { Core } from "nextjs-darkmode";
 import { Demo, Header } from "@repo/shared";
+import { parseMath } from "latex-math";
 
 /** Vite App */
 function App(): ReactNode {
   const { setLoading } = useLoader();
-  const handleClick = useCallback(() => setLoading(true), []);
+  const handleClick = useCallback(() => {
+    setLoading(true);
+    console.log(parseMath("x^2"));
+  }, []);
   return (
     <Layout>
       <Core t="background .5s" />

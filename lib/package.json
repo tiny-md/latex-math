@@ -42,20 +42,18 @@
     "tsup": "^8.4.0",
     "typescript": "^5.8.2",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.0.9"
-  },
-  "dependencies": {
-    "r18gs": "^3.0.1"
-  },
-  "peerDependencies": {
-    "@types/react": ">=16.8",
-    "next": ">=10",
-    "react": ">=16.8"
-  },
-  "peerDependenciesMeta": {
-    "next": {
-      "optional": true
-    }
+    "vitest": "^3.0.9",
+    "@unified-latex/unified-latex-ctan": "^1.8.2",
+    "@unified-latex/unified-latex-types": "^1.8.0",
+    "@unified-latex/unified-latex-util-arguments": "^1.8.2",
+    "@unified-latex/unified-latex-util-catcode": "^1.8.2",
+    "@unified-latex/unified-latex-util-environments": "^1.8.2",
+    "@unified-latex/unified-latex-util-match": "^1.8.0",
+    "@unified-latex/unified-latex-util-pegjs": "^1.8.1",
+    "@unified-latex/unified-latex-util-print-raw": "^1.8.0",
+    "@unified-latex/unified-latex-util-trim": "^1.8.2",
+    "@unified-latex/unified-latex-util-visit": "^1.8.2",
+    "unified": "^11.0.5"
   },
   "funding": [
     {
