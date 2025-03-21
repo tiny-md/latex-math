@@ -1,5 +1,11 @@
 packages:
-  - "examples/*"
-  - "packages/*"
-  - "lib"
-  - "scripts"
+  - examples/*
+  - packages/*
+  - lib
+  - scripts
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - esbuild
+  - pre-commit
+  - sharp
+  - spawn-sync
