@@ -112,13 +112,13 @@ describe("unified-latex-util-parse", () => {
     expect(printRaw(parsed)).toEqual("\\_2");
   });
 
-  it.only("Can parse math mode directly", () => {
+  it("Can parse math mode directly", () => {
     let parsed;
     parsed = parseMath("^2");
     expect(printRaw(parsed)).toEqual("^{2}");
   });
 
-  it.only("Puts braces around arguments", () => {
+  it("Puts braces around arguments", () => {
     const parsed = parse("\\mathbb X");
     expect(printRaw(parsed)).toEqual("\\mathbb{X}");
   });

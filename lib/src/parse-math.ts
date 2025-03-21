@@ -7,6 +7,6 @@ import { unifiedLatexFromString } from "./plugin-from-string";
  * nodes is returned (instead of a "root" node).
  */
 export function parseMath(str: string): Ast.Node[] {
-  const parser = unified().use(unifiedLatexFromString);
+  const parser = unified().use(unifiedLatexFromString, { mode: "math" });
   return (parser.parse({ value: str }) as Ast.Root).content;
 }

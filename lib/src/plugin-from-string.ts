@@ -13,6 +13,7 @@ import { unifiedLatexProcessAtLetterAndExplMacros } from "./process-at-letter-an
 
 export type PluginOptions =
   | {
+      mode?: "math" | "regular";
       macros?: MacroInfoRecord;
       environments?: EnvInfoRecord;
       flags?: {
@@ -39,6 +40,7 @@ export type PluginOptions =
 export const unifiedLatexFromString: Plugin<PluginOptions[], string, Ast.Root> =
   function unifiedLatexFromString(options) {
     const {
+      mode = "regular",
       macros = {},
       environments = {},
       flags: { atLetter = false, expl3 = false, autodetectExpl3AndAtLetter = false } = {},
@@ -54,7 +56,7 @@ export const unifiedLatexFromString: Plugin<PluginOptions[], string, Ast.Root> =
 
     // Build up a parser that will perform all the needed steps
     const fullParser = unified()
-      .use(unifiedLatexFromStringMinimal)
+      .use(unifiedLatexFromStringMinimal, { mode })
       .use(unifiedLatexProcessAtLetterAndExplMacros, {
         atLetter,
         expl3,
@@ -74,7 +76,6 @@ export const unifiedLatexFromString: Plugin<PluginOptions[], string, Ast.Root> =
 
     const parser: Parser<Ast.Root> = str => {
       const file = fullParser.processSync({ value: str });
-      console.log("---", fullParser.parse({ value: str }), file.result);
       return file.result as Ast.Root;
     };
 
