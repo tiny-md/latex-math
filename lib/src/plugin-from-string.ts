@@ -1,11 +1,6 @@
 import { Plugin, Parser, unified } from "unified";
 import { environmentInfo, macroInfo } from "@unified-latex/unified-latex-ctan";
 import * as Ast from "@unified-latex/unified-latex-types";
-import { EnvInfoRecord, MacroInfoRecord } from "@unified-latex/unified-latex-types";
-import {
-  unifiedLatexTrimEnvironmentContents,
-  unifiedLatexTrimRoot,
-} from "@unified-latex/unified-latex-util-trim";
 import { unifiedLatexAstComplier } from "./compiler-ast";
 import { unifiedLatexFromStringMinimal } from "./plugin-from-string-minimal";
 import { unifiedLatexProcessMacrosAndEnvironmentsWithMathReparse } from "./process-macros-and-environments";
@@ -14,8 +9,8 @@ import { unifiedLatexProcessAtLetterAndExplMacros } from "./process-at-letter-an
 export type PluginOptions =
   | {
       mode?: "math" | "regular";
-      macros?: MacroInfoRecord;
-      environments?: EnvInfoRecord;
+      macros?: Ast.MacroInfoRecord;
+      environments?: Ast.EnvInfoRecord;
       flags?: {
         /**
          * Whether to parse macros as if `\makeatletter` is set (i.e., parse `@` as a regular macro character)
@@ -47,8 +42,12 @@ export const unifiedLatexFromString: Plugin<PluginOptions[], string, Ast.Root> =
     } = options || {};
 
     // Build up a parsing plugin with only unified components
-    const allMacroInfo: MacroInfoRecord = Object.assign({}, ...Object.values(macroInfo), macros);
-    const allEnvInfo: EnvInfoRecord = Object.assign(
+    const allMacroInfo: Ast.MacroInfoRecord = Object.assign(
+      {},
+      ...Object.values(macroInfo),
+      macros,
+    );
+    const allEnvInfo: Ast.EnvInfoRecord = Object.assign(
       {},
       ...Object.values(environmentInfo),
       environments,
@@ -69,9 +68,9 @@ export const unifiedLatexFromString: Plugin<PluginOptions[], string, Ast.Root> =
         environments: allEnvInfo,
       })
       //   @ts-ignore
-      .use(unifiedLatexTrimEnvironmentContents)
+      // .use(unifiedLatexTrimEnvironmentContents)
       //   @ts-ignore
-      .use(unifiedLatexTrimRoot)
+      // .use(unifiedLatexTrimRoot)
       .use(unifiedLatexAstComplier);
 
     const parser: Parser<Ast.Root> = str => {

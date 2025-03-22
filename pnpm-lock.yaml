@@ -176,9 +176,6 @@ importers:
       '@unified-latex/unified-latex-util-print-raw':
         specifier: ^1.8.0
         version: 1.8.0
-      '@unified-latex/unified-latex-util-trim':
-        specifier: ^1.8.2
-        version: 1.8.2
       '@unified-latex/unified-latex-util-visit':
         specifier: ^1.8.2
         version: 1.8.2
