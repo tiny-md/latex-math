@@ -1,5 +1,5 @@
 import { unified } from "unified";
-import * as Ast from "@unified-latex/unified-latex-types";
+import type * as Ast from "@unified-latex/unified-latex-types";
 import { unifiedLatexFromString } from "./plugin-from-string";
 
 /**

@@ -45,9 +45,11 @@
     "peggy": "^4.2.0",
     "tsup": "^8.4.0",
     "typescript": "^5.8.2",
-    "unified": "^11.0.5",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.0.9"
+  },
+  "dependencies": {
+    "unified": "^11.0.5"
   },
   "funding": [
     {

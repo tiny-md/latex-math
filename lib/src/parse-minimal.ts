@@ -1,5 +1,5 @@
 import { LatexPegParser } from "./peg/parser";
-import * as Ast from "@unified-latex/unified-latex-types";
+import type * as Ast from "@unified-latex/unified-latex-types";
 
 /**
  * Parse `str` to an AST with minimal processing. E.g., macro

@@ -1,5 +1,5 @@
-import { Plugin, Parser } from "unified";
-import * as Ast from "@unified-latex/unified-latex-types";
+import type { Plugin, Parser } from "unified";
+import type * as Ast from "@unified-latex/unified-latex-types";
 import { parseMathMinimal, parseMinimal } from "./parse-minimal";
 
 type PluginOptions = {
