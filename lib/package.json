@@ -2,7 +2,7 @@
   "name": "latex-math",
   "author": "Mayank Kumar Chaudhari <https://mayank-chaudhari.vercel.app>",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Parses LaTeX math strings—typically extracted from Markdown—and converts them into an abstract syntax tree (AST).",
   "license": "MPL-2.0",
   "main": "./dist/index.js",
