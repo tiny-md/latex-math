@@ -1,4 +1,4 @@
-import { LatexPegParser } from "@unified-latex/unified-latex-util-pegjs";
+import { LatexPegParser } from "./peg/parser";
 import * as Ast from "@unified-latex/unified-latex-types";
 
 /**
@@ -7,7 +7,7 @@ import * as Ast from "@unified-latex/unified-latex-types";
  * function.
  */
 export function parseMinimal(str: string): Ast.Root {
-    return LatexPegParser.parse(str);
+  return LatexPegParser.parse(str);
 }
 
 /**
@@ -19,5 +19,5 @@ export function parseMinimal(str: string): Ast.Root {
  * parsed as macros (even though arguments are not attached to them).
  */
 export function parseMathMinimal(str: string): Ast.Node[] {
-    return LatexPegParser.parse(str, { startRule: "math" });
+  return LatexPegParser.parse(str, { startRule: "math" });
 }
