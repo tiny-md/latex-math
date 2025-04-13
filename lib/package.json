@@ -48,7 +48,7 @@
     "esbuild": "^0.25.2",
     "esbuild-plugin-peggy": "^0.0.0",
     "esbuild-plugin-rdi": "^0.0.0",
-    "jsdom": "^26.0.0",
+    "jsdom": "^26.1.0",
     "peggy": "^4.2.0",
     "tsup": "^8.4.0",
     "typescript": "^5.8.3",
