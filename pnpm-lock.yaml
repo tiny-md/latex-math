@@ -190,8 +190,8 @@ importers:
         specifier: ^26.1.0
         version: 26.1.0
       peggy:
-        specifier: ^4.2.0
-        version: 4.2.0
+        specifier: ^5.0.0
+        version: 5.0.0
       tsup:
         specifier: ^8.4.0
         version: 8.4.0(postcss@8.5.3)(typescript@5.8.3)(yaml@2.7.0)
@@ -1031,6 +1031,10 @@ packages:
     resolution: {integrity: sha512-oRyzXE7nirAn+5yYjCdWQHg3EG2XXcYRoYNOK8Quqnmm+9FyK/2YWVunwudlYl++M3xY+gIAdf0vAYS+p0nKfQ==}
     engines: {node: '>=18'}
 
+  '@peggyjs/from-mem@2.0.0':
+    resolution: {integrity: sha512-f+pL/s2DiT+2dxwheSoJT0P/KJy/s0klzE+ZqRdXHlkeyFk/DpKtyjLZIiA79kx56g3oEPA8Zu9EzEKzAwuvhw==}
+    engines: {node: '>=20'}
+
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
@@ -1569,6 +1573,10 @@ packages:
 
   commander@12.1.0:
     resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
+    engines: {node: '>=18'}
+
+  commander@13.1.0:
+    resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
     engines: {node: '>=18'}
 
   commander@4.1.1:
@@ -2700,6 +2708,11 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
+  peggy@5.0.0:
+    resolution: {integrity: sha512-f91rDGRveINCxwVGCTavT4ACjToNn1mjjrI3LZVvTWqkEW5k5+G/h/iS0G81q+0uANCWqlrc8jFadRVOBHimEA==}
+    engines: {node: '>=20'}
+    hasBin: true
+
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
@@ -3086,6 +3099,10 @@ packages:
   source-map-generator@0.8.0:
     resolution: {integrity: sha512-psgxdGMwl5MZM9S3FWee4EgsEaIjahYV5AzGnwUvPhWeITz/j6rKpysQHlQ4USdxvINlb8lKfWGIXwfkrgtqkA==}
     engines: {node: '>= 10'}
+
+  source-map-generator@2.0.0:
+    resolution: {integrity: sha512-4KomB7QsJti7dFBAVF6SXHzuCNQauk4gE2CummcqPzl+eJqXz1CkkiBdVXXW3g8VGh23bxcdEVACOzrxpIqnUg==}
+    engines: {node: '>=20'}
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -4323,6 +4340,10 @@ snapshots:
     dependencies:
       semver: 7.6.3
 
+  '@peggyjs/from-mem@2.0.0':
+    dependencies:
+      semver: 7.7.1
+
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
@@ -4962,6 +4983,8 @@ snapshots:
       color-string: 1.9.1
 
   commander@12.1.0: {}
+
+  commander@13.1.0: {}
 
   commander@4.1.1: {}
 
@@ -6214,6 +6237,12 @@ snapshots:
       commander: 12.1.0
       source-map-generator: 0.8.0
 
+  peggy@5.0.0:
+    dependencies:
+      '@peggyjs/from-mem': 2.0.0
+      commander: 13.1.0
+      source-map-generator: 2.0.0
+
   picocolors@1.1.1: {}
 
   picomatch@2.3.1: {}
@@ -6662,6 +6691,8 @@ snapshots:
   slash@3.0.0: {}
 
   source-map-generator@0.8.0: {}
+
+  source-map-generator@2.0.0: {}
 
   source-map-js@1.2.1: {}
 
