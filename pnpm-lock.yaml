@@ -190,8 +190,8 @@ importers:
         specifier: ^26.1.0
         version: 26.1.0
       peggy:
-        specifier: ^5.0.0
-        version: 5.0.0
+        specifier: ^5.0.2
+        version: 5.0.2
       tsup:
         specifier: ^8.4.0
         version: 8.4.0(postcss@8.5.3)(typescript@5.8.3)(yaml@2.7.0)
@@ -2708,8 +2708,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  peggy@5.0.0:
-    resolution: {integrity: sha512-f91rDGRveINCxwVGCTavT4ACjToNn1mjjrI3LZVvTWqkEW5k5+G/h/iS0G81q+0uANCWqlrc8jFadRVOBHimEA==}
+  peggy@5.0.2:
+    resolution: {integrity: sha512-s7cQVFZ845bskMM60L3pjWv/6QkC0dZeWd/qrj9g7vvjjS/gkHLTA4Bzs6dxIBezDPdD+WUjoEKgiH7OJA3JAw==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -6237,7 +6237,7 @@ snapshots:
       commander: 12.1.0
       source-map-generator: 0.8.0
 
-  peggy@5.0.0:
+  peggy@5.0.2:
     dependencies:
       '@peggyjs/from-mem': 2.0.0
       commander: 13.1.0
