@@ -50,7 +50,7 @@
     "esbuild-plugin-rdi": "^0.0.0",
     "jsdom": "^26.1.0",
     "peggy": "^5.0.2",
-    "tsup": "^8.4.0",
+    "tsup": "^8.5.0",
     "typescript": "^5.8.3",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.1.3"
