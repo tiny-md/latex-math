@@ -41,7 +41,7 @@
   "dependencies": {
     "@mayank1513/fork-me": "^2.1.3",
     "@repo/scripts": "workspace:*",
-    "esbuild-raw-plugin": "^0.2.0",
+    "esbuild-raw-plugin": "^0.3.0",
     "latex-math": "workspace:*",
     "nextjs-darkmode": "^1.0.10",
     "nextjs-themes": "^4.0.6",
